@@ -62,4 +62,24 @@ public class PhoneBookTest {
         phoneBook.add("Alena", "89992227677");
         String name = phoneBook.findByNumber(null);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void test_find_by_null_name() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Irina", "89992227676");
+        phoneBook.add("Alena", "89992227677");
+        String phoneNumber = phoneBook.findByName(null);
+    }
+
+    @Test
+    public void test_find_by_name() {
+        String katya = "Katya";
+        String ketrin_phone = "89992227678";
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Irina", "89992227676");
+        phoneBook.add("Alena", "89992227677");
+        phoneBook.add(katya, ketrin_phone);
+        String phoneNumber = phoneBook.findByName(katya);
+        assertEquals(ketrin_phone, phoneNumber);
+    }
 }
