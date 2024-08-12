@@ -82,4 +82,13 @@ public class PhoneBookTest {
         String phoneNumber = phoneBook.findByName(katya);
         assertEquals(ketrin_phone, phoneNumber);
     }
+
+    @Test
+    public void test_print_all_names() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("I", "999");
+        phoneBook.add("A", "666");
+        phoneBook.add("Ioo", "777");
+        phoneBook.printAllNames();
+    }
 }

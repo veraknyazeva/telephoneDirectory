@@ -28,4 +28,8 @@ public class PhoneBook {
         }
         return contacts.get(name);
     }
+
+    public void printAllNames(){
+
+    }
 }
