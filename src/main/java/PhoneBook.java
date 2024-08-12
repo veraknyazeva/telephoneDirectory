@@ -23,6 +23,9 @@ public class PhoneBook {
     }
 
     public String findByName(String name){
-        return null;
+        if(name == null){
+            throw new IllegalArgumentException();
+        }
+        return contacts.get(name);
     }
 }
