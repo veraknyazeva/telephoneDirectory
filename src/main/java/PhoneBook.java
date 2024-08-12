@@ -16,20 +16,20 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phoneNumber) {
-        if(phoneNumber == null){
+        if (phoneNumber == null) {
             throw new IllegalArgumentException();
         }
         return contactsByPhone.get(phoneNumber);
     }
 
-    public String findByName(String name){
-        if(name == null){
+    public String findByName(String name) {
+        if (name == null) {
             throw new IllegalArgumentException();
         }
         return contacts.get(name);
     }
 
-    public void printAllNames(){
-
+    public void printAllNames() {
+        System.out.println(contacts.keySet());
     }
 }
