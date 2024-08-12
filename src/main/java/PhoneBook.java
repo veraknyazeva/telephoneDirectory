@@ -16,6 +16,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phoneNumber) {
-        return null;
+        if(phoneNumber == null){
+            throw new IllegalArgumentException();
+        }
+        return contactsByPhone.get(phoneNumber);
     }
+
+
 }
